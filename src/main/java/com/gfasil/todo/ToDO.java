@@ -12,7 +12,16 @@ public class ToDO {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     private String task;
-    private Boolean isDOne;
+    private Boolean isDone;
+    public Boolean getDone() {
+        return isDone;
+    }
+
+    public void setDone(Boolean done) {
+        isDone = done;
+    }
+
+
 
     public ToDO(String task){
         this.task=task;
@@ -37,11 +46,4 @@ public class ToDO {
         this.task = task;
     }
 
-    public Boolean getDOne() {
-        return isDOne;
-    }
-
-    public void setDOne(Boolean DOne) {
-        isDOne = DOne;
-    }
 }
